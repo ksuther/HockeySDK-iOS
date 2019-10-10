@@ -34,7 +34,7 @@
   if(self) {
     _envelopeTypeName =[coder decodeObjectForKey:@"envelopeTypeName"];
     _dataTypeName = [coder decodeObjectForKey:@"dataTypeName"];
-    _state = (BITSessionState)[coder decodeIntForKey:@"self.state"];
+    _state = (BITSessionState)[coder decodeIntegerForKey:@"self.state"];
   }
   return self;
 }
@@ -43,7 +43,7 @@
   [super encodeWithCoder:coder];
   [coder encodeObject:self.envelopeTypeName forKey:@"envelopeTypeName"];
   [coder encodeObject:self.dataTypeName forKey:@"dataTypeName"];
-  [coder encodeInt:self.state forKey:@"self.state"];
+  [coder encodeInteger:self.state forKey:@"self.state"];
 }
 
 @end
